@@ -94,9 +94,12 @@ function activityConflict(event1, time1, event2, time2, scheduled) {
 
 //#PAYMENT#//
 
-$('#payment').click(function() {
-    if ($(this).children().first()[0].value === 'select method') {
-        $(this).children().first().remove();
+$('#payment > option').each(function() {
+    if(this.value === 'Credit Card') {
+        $(this).attr('selected', true);
+    }
+    if (this.value === 'select method'){
+        $(this).attr('disabled', true);
     }
  });
 
