@@ -164,10 +164,6 @@ function validEntry(val, id) {
         noErrors = false;
         $(`#${id}`).before(error(`Cannot be blank. `));
     }
-    if(val === 'select method'){
-        noErrors = false;
-        $(`#${id}`).before(error(`Valid payment method`));
-    }
     //if HTML mail validation fails
     if(id === 'mail') {
       if(!validEmail(val)) {
